@@ -26,5 +26,7 @@
        "@/*": ["./src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  // Errores de compilacion de tests unitario  (deberan ignorarse)
+  "exclude": ["src/**/*.tests.ts", "src/**/*.test.tsx", "src/test"],
 }

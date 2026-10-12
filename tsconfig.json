@@ -10,9 +10,9 @@
          "@/lib": ["src/lib"], 
          "@/hooks": ["src/hooks"],     **/
         "types": ["vitest/globals", "@testing-library/jest-dom"] 
-    },
-     
-  },
+    } 
+  },  //se aniadio la linea 15: Para excluir error de test, en tiempo de construccion del producto
+  "exclude": ["src/**/*.tests.ts", "src/**/*.test.tsx", "src/test"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

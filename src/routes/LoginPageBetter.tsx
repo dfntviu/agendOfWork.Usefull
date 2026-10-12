@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { data, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import { authService } from '@/services/auth.service'
 import { ThemeToggle } from '@/components/ThemeToggle'
  import './LoginPage.css';  // ## debe de perm. en el mismo directorio  

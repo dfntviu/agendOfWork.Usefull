@@ -3,8 +3,8 @@ import {
   Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend,
 } from 'chart.js'
 import { useEvents } from '@/hooks/useEvents'
-import { useProfiles } from '@/hooks/useProfiles'
  import { useResources } from '@/hooks/useResources' //temporal
+   // import { useProfiles } from '@/hooks/useProfiles'
 
 // import { title } from 'process'
 

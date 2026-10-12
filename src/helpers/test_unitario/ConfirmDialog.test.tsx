@@ -27,7 +27,7 @@ import { ConfirmDialog } from "@/components/ConfirmDialog";
             onCancel={() => {}}
         />)
 
-        expect(screen.getByText('Borrar el Evento?')).toBeInTheDocument();
+        expect(screen.getByText('Borrar el Evento?')).toBeInTheDocumente()
         expect(screen.getByText('Si, borrar')).toBeInTheDocument();
         expect(screen.getByText('Cancelar')).toBeInTheDocument();
     })
