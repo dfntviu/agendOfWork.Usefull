@@ -4,7 +4,7 @@
 > compartidos (salas, equipo, vehículos). Autenticación real, permisos por rol,
 > invitación por código y tablero de indicadores.
 
-**🔗 Demo en vivo:** https://agendofwork.vercel.app
+**🔗 Demo en vivo:** https://agend-of-work-usefull-3jmi.vercel.app/
 
 <!--
   Capturas (recomendado): sube las imágenes a una carpeta /docs del repo
