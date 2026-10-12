@@ -1,0 +1,221 @@
+ .team-page{
+    max-width: 560px;
+ }
+
+ .page-title{
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+ }  
+
+ .team-card{
+    padding: 18px;
+    margin-bottom: 20px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+ }
+
+ .team-card-title{
+    margin: 0 0 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+ }
+
+ /* Fila: input + botón unirse */
+ .join-row{ 
+    display: 1 1 auto;  /*- Input ocupa espacio disponible - */
+    gap: 8px;
+ }
+
+ .join-row .input{
+    flex: 0 0 auto; /*- el boton no crece: Solo su contenido - */
+    /* min-width: 0; */
+ }
+
+
+ .team-page .input:focus{
+    padding: 9px 11px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: var(--color-text);
+    background: var(--color-surface-2);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+ }
+
+ .team-page .btn {
+    padding: 9px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, opacity 0.15s ease;
+ }
+
+ .team-page .btn--primary{
+     background: var(--color-primary);
+     color: var(--color-primary-text);
+ }
+
+ .team-page .btn--primary:hover:not(:disabled){
+    background: var(--color-primary-hove);
+ }
+
+ .team-page .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+ }
+
+ .form-error {
+    margin: 10px 0 0;
+    padding: 8px 11px;
+    font-size: 0.82rem;
+    color: var(--color-danger);  
+    background: var(--color-danger-bg);
+    border-radius: var(--radius-sm); 
+ }
+
+ .team-selector-wrap{
+    margin-bottom: 20px;
+ }   
+
+ .invite-code { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+ }
+
+ .invite-code-label {
+    font-size: 0.86rem;
+    color: var(--color-text-muted);
+ }
+
+.invite-code-value  {
+    font-family: var(--mono, monospace);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.005rem;
+    color: var(--color-primary);
+    background: var(--color-accent-soft);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+}
+
+/* Miembros */
+    .members-title {
+        margin: 0 0 10px;
+        font-size: 1rem;
+        font-weight: 600;
+         font-family: "Verdana", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: var(--color-danger);
+    }
+
+    .members-list {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         display: flex;
+         flex-direction: column;
+         gap: 8px;
+    }
+
+    .member-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 20px;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+    }
+    
+    .member-name {
+        flex: 1;
+        min-width: 0;
+        font-size: 0.9rem;
+        color: var(--color-text);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .member-you{
+        color: var(--color-text-muted);
+        font-size: 0.82rem;
+    }
+
+    .member-role {
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing:  0.03rem;
+        padding: 2px 8px;
+        border-radius: 999px;
+        flex-shrink: 0;
+    }
+
+    .member-role--owner{
+        color: var(--color-primary);
+        background: var(--color-accent-soft);
+    }
+
+    .member-role--admin{
+      color: var(--color-primary);
+      background: var(--color-accent-soft);
+    }
+
+    .member-role--member{
+      color: var(--color-text-muted);
+      background: var(--color-sucess-bg);
+    }
+
+    .members-actions {
+      display: flex;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    
+    /* Botones pequeños (comparten look con la lista de eventos) */
+    .team-page .btn-sm {
+       padding: 5px 10px;
+       font-size: 0.78rem;
+       font-weight: 600;
+       font-family: inherit;
+       border-radius: var(--radius-sm);
+       border: 1px solid var(--color-border);
+       background: transparent;
+       cursor: pointer;
+       white-space: nowrap;
+       transition:  background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .team-page .btn-sm--edit{
+       color: var(--color-surface-2);
+       border-color: var(--color-primary);
+    }
+
+    .team-page .btn-sm--delete:hover{
+       background: color(--color-danger);
+       color: #fff;
+       border-color: var(--color-danger);
+    }
+
+    .team-page .btn-sm--delete{
+      color: var(--color-surface-2);
+      border-color: var(--color-primary);
+    }
+
+    .team-page .btn-sm--delete:hover{
+      background: var(--color-danger);
+      color:#fff;
+      border-color: var(--color-danger);
+    }

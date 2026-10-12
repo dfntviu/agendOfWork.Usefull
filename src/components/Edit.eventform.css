@@ -1,0 +1,110 @@
+/* ============================================================
+   CreateEventForm.css — formulario de creación de evento
+   Usa tokens de theme.css: funciona en claro y oscuro.
+   ============================================================ */
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+  flex-shrink: 0;
+  padding: 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.event-form-title {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* campo = etiqueta + control, apilados */
+.event-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.event-form .field-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* control genérico (input y select comparten estilo) */
+.event-form .input {
+  width: 100%;
+  padding: 9px 11px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.event-form .input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+.event-form .input:focus {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+/* botón primario */
+.event-form .btn {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+.event-form .btn--primary {
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+.event-form .btn--primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+.event-form .btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* botón secundario (Cancelar) */
+.event-form .btn--secondary {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+.event-form .btn--secondary:hover:not(:disabled) {
+  background: var(--color-surface-2);
+}
+
+/* dos botones lado a lado (Guardar / Cancelar en edición) */
+.event-form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* mensaje de error */
+.event-form .form-error {
+  margin: 0;
+  padding: 8px 11px;
+  font-size: 0.82rem;
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+  border-radius: var(--radius-sm);
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fondo redondeado en color de acento -->
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#2d5bff"/>
+  <!-- Cuerpo del calendario -->
+  <rect x="7" y="8" width="18" height="17" rx="2.5" fill="#ffffff"/>
+  <!-- Banda superior del encabezado -->
+  <rect x="7" y="8" width="18" height="5" rx="2.5" fill="#1e45d6"/>
+  <rect x="7" y="11" width="18" height="2" fill="#1e45d6"/>
+  <!-- Anillas -->
+  <rect x="11" y="5" width="2.4" height="5" rx="1.2" fill="#dfe6ff"/>
+  <rect x="18.6" y="5" width="2.4" height="5" rx="1.2" fill="#dfe6ff"/>
+  <!-- Puntos de los días -->
+  <circle cx="11.5" cy="17" r="1.3" fill="#2d5bff"/>
+  <circle cx="16" cy="17" r="1.3" fill="#2d5bff"/>
+  <circle cx="20.5" cy="17" r="1.3" fill="#9db2ff"/>
+  <circle cx="11.5" cy="21" r="1.3" fill="#9db2ff"/>
+  <!-- Día marcado (destacado) -->
+  <circle cx="16" cy="21" r="1.8" fill="#1f9254"/>
+</svg>

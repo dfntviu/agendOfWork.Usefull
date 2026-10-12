@@ -1,0 +1,45 @@
+    /* ===================================================
+        Placeholder animado de carga 
+        El brillo que se desliza y da la sensacion de "cargando.."
+       =================================================== */
+
+.skeleton {
+    display: block;
+    background: var(--color-surface-2);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.skeleton::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateY(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.008),
+    transparent);
+     animation: skeleton-shimmer 1.4s infinite;
+}
+
+/* En modo claro el brillo es mas tenue/obscuro para que se note */
+:root:not([data-theme= "dark"]) .skeleton::after {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,0,0,0.05),
+        transparent
+    );
+}
+
+ @keyframes skeleton-shimmer {
+    100% {
+        transform: translateY(100%);
+    }
+ }
+
+ /* Lista de filas skeleton */
+ .skeleton-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+ }

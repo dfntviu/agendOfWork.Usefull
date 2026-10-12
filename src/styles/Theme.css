@@ -1,0 +1,88 @@
+/* ---- MODO CLARO (corporativo) — es el modo por defecto ---- */
+:root {
+  /* Fondos */
+  --color-bg: #f4f6fb;          /* fondo general de la página */
+  --color-surface: #ffffff;     /* tarjetas, paneles */
+  --color-surface-2: #eef1f7;   /* fondos sutiles (inputs en reposo) */
+ 
+  /* Texto */
+  --color-text: #1a2233;        /* texto principal */
+  --color-text-muted: #5b6577;  /* texto secundario, placeholders */
+ 
+  /* Bordes */
+  --color-border: #d7dce6;
+ 
+  /* Acento (marca) — el color de la acción principal */
+  --color-primary: #2d5bff;
+  --color-primary-hover: #1e45d6;
+  --color-primary-text: #ffffff;  /* texto SOBRE el acento */
+ 
+  /* Estados semánticos */
+  --color-danger: #d6334a;        /* errores */
+  --color-danger-bg: #fdecef;
+  --color-success: #1f9254;       /* éxito */
+  --color-success-bg: #e7f6ee;
+ 
+  /* Barra lateral (superficie de acento) */
+  --color-sidebar: #2c5990;              /* fondo de la barra */
+  --color-sidebar-text: #ffffff;         /* texto/íconos claros */
+  --color-sidebar-text-muted: rgba(255, 255, 255, 0.82);
+  --color-sidebar-active-text: #2c5990;  /* texto del ítem activo (sobre blanco) */
+ 
+  /* Formas y profundidad */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 10px 30px rgba(26, 34, 51, 0.08);
+  --shadow-focus: 0 0 0 3px rgba(45, 91, 255, 0.25);
+ 
+  color-scheme: light;
+}
+ 
+/* ---- MODO OSCURO — solo redefine los MISMOS tokens ----
+   Como los nombres son idénticos, ningún componente cambia.
+   Se activa poniendo  data-theme="dark"  en <html>. */
+:root[data-theme="dark"] {
+  --color-bg: #0f131c;
+  --color-surface: #171d2a;
+  --color-surface-2: #1f2635;
+ 
+  --color-text: #e8ecf4;
+  --color-text-muted: #9aa5b8;
+ 
+  --color-border: #2a3344;
+ 
+  --color-primary: #5b82ff;
+  --color-primary-hover: #7295ff;
+  --color-primary-text: #0f131c;
+  --color-accent-soft: rgba(124, 37, 129, 0.37);  /** acento muy tenue para fondos/hover  -> [nuevo]  */
+ 
+  --color-danger: #ff6b7e;
+  --color-danger-bg: #2a1a1f;
+  --color-success: #4cd88a;
+  --color-success-bg: #14241c;
+ 
+  /* En oscuro la barra es más apagada, para no deslumbrar */
+  --color-sidebar: #1a2433;
+  --color-sidebar-text: #e8ecf4;
+  --color-sidebar-text-muted: rgba(232, 236, 244, 0.72);
+  --color-sidebar-active-text: #1a2433;
+ 
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-focus: 0 0 0 3px rgba(91, 130, 255, 0.35);
+ 
+  color-scheme: dark;
+}
+ 
+/* ---- Base global ---- */
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  /* transición suave al cambiar de tema */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}

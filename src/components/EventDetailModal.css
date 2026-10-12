@@ -1,0 +1,88 @@
+/**
+    =================================================
+     Ventana del detalle de un evento Usa tokens de 
+     theme.css: funciona en los modos: Claro y Obscuro
+    =================================================
+*/
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal-card {
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 14px;
+    border-bottom: 2.1px solid var(--color-primary); /** grosor azul bajo **/
+}
+
+.modal-title{
+    margin: 0 0 18px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.modal-data {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+ .modal-row:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+ }
+
+ .modal-row dt { 
+   font-size: 0.85rem;
+   font-weight: 600;
+   color: var(--color-text-muted);
+   flex-shrink: 0;
+ }
+
+.modal-row dd {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    text-align: right;
+}   
+
+/* Boton para cerrar (secundario, discreto)  */
+ .modal-close-btn {
+    margin-top: 22px;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: backgroud-color 0.15s ease;
+ }
+
+ .modal-close-btn:hover {
+    background: var(--color-surface-2);
+ }

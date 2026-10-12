@@ -1,0 +1,92 @@
+ /*
+  ** No lo respeta, lo envía a la esquina. A pesar de que ..-overlay-diag
+  ** posee las mismas propiedades **
+  .confirm-dialog {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    padding: 16px;
+ } */
+
+ .confirm-overlay-diag {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    padding: 16px;
+ }
+
+ .confirm-card {
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    width: 100%;
+    max-width: 300px;
+ }
+
+.confirm-title {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+    font-weight: 600;
+ }
+    /** config del cuadro del dialogo de la confirmacion de eliminacion **/
+ .confirm-message {
+    margin: 0 0 20px;
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    text-align: center;
+ }
+    /** posicion de los botones (acciones) **/
+ .confirm-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+ }
+
+ .confirm-btn {
+    padding: 9px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+ }
+
+ .confirm-btn--cancel {
+    background: transparent;
+    color: var(--color-text);
+    border-color: var(--color-border);
+ }
+
+ .confirm-btn--cancel:hover{
+    background: var(--color-surface-2);
+ }
+ .confirm-btn--primary {
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+ }
+
+ .confirm-btn--primary:hover {
+    background: var(--color-primary-hover);
+ }
+ 
+ .confirm-btn--danger {
+     background: var(--color-danger);
+    color: #fff;
+ }
+
+ .confirm-btn--danger:hover {
+    filter: brightness(0.92);
+ }

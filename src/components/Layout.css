@@ -1,0 +1,228 @@
+  * {
+    box-sizing: border-box;
+  }
+  /* Resetear las propiedades de la pagina(en general) */
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%; /** No afectar a otros componentes, acomodar**/
+    min-height: 100vh;
+  }
+
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+ /* ----- barra lateral (escritorio) ----- */
+  .sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    background: var(--color-sidebar);
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+ 
+  .sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px 18px;
+  }
+
+  .sidebar-brand-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: center;
+    color: var(--color-sidebar-text);
+    font-size: 17px;
+  }
+
+  .sidebar-brand-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-sidebar-text);
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 10px 11px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    background: transparent;
+    color: var(--color-sidebar-text-muted);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .nav-link,
+  .nav-link:visited,
+  .nav-link:active {
+    text-decoration: none;
+  }
+
+  .nav-link i {
+     background: rgba(255, 255, 255, 0.12);
+     color: var(--color-sidebar-text);
+  }
+
+  .nav-link--active {
+    background: #ffffff;
+    color: var(--color-sidebar-active-text);
+    font-weight: 600;
+  }
+
+  .nav-link--active:hover {
+    background: #ffffff;
+    color: var(--color-sidebar-active-text);
+  }
+
+  .sidebar-footer {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sidebar-footer .theme-toggle {
+    align-self: flex-start;
+  } 
+
+  .content {
+    flex: 1;
+    padding: 28px 32px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: auto;  /** manter la posicion elem fija **/
+  }
+
+  /* =============================================================
+      RESP. MÓVIL (<768px): la barra lateral pasa a barra inferior fija 
+     =============================================================*/ 
+  @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+      /* la barra se fija abajo, horizontal */
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 900;
+        padding: 6px 4px;
+        gap: 0;
+        /* borde superior para separarla del contenido */
+        border-top: 1px solid rgba(255, 255,255, 0.15);
+      }
+        /* La marca y el pie no van en la barra inferior */
+      .sidebar-brand {
+        display: none;
+      }
+
+      /* Obtener la salida, sin quitar espacio a las demas etiquetas de naveg. */
+      .sidebar-footer {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .sidebar-footer .nav-link--logout {
+        flex-direction: column;
+        gap: 3px;
+        padding: 6px 8px;
+        width: auto;
+        font-size: 10px;
+      }
+
+      /* Los   enlaces se reparten en fila,centrados, en columna icono+texto */
+      .sidebar-nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+      }
+
+      .nav-link {
+         flex-direction: flex;
+         align-items: center;
+         gap: 11px; /*3px;*/
+         padding: 10px 11px;/**6px 4px;*/
+         width: 100%;  /**auto;*/
+         /* flex: 1; */
+         text-align: center;
+         border-radius: 8px; /*10px;*/
+         /* Quitar el piso, para pasara en la mayoria de dispositivos moviles */
+         font-size: 14px;
+        text-decoration: none;
+        background: transparent;
+        color: var(--color-sidebar-text-muted);
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        font-family: inherit;
+        transition: background-color 0.15s ease, color 0.15s ease;
+      }
+
+      .nav-link,
+      .nav-link:visited,
+      .nav-link:active {
+        text-decoration: none;
+      }
+
+      .nav-link-label {
+        font-size: 10px;
+        line-height: 1;
+      }
+      /* Ayuda en varios dispositivos, Samsung, Iphones 14+ y Resoluciones diversas 
+      el tamanio ayuda, no exceder de los 12px o sino agrupar para tamanios responsivos
+      con acortaciones*/
+      .nav-link i {
+        font-size: 11px;
+      }
+      /*  */
+      .sidebar-footer .nav-link--logout .nav-link-label {
+        display: none;
+      }
+
+      .nav-link--active {
+        background: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+      }
+
+      .nav-link--active:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+      }
+        /* el contenido ocupa todo el ancho y deja espacio para la barra inferior */
+      .content {
+        padding: 16px;
+        padding-bottom: 80px;  /** que la barra inferior no tape al final**/
+      }
+
+  }   
