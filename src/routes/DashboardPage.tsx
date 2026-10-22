@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useMyTeams } from '../hooks/useMyTeams'
 import { useCreateTeam } from '../hooks/useCreateTeam'
 import { authService } from '../services/auth.service'
-import { Link } from 'react-router-dom'
+ // import { Link } from 'react-router-dom' [habilitar, cuando se pruebe vista de prueba]
 
 export function DashboardPage() {
   const { data: teams, isLoading } = useMyTeams()
@@ -27,9 +27,9 @@ export function DashboardPage() {
 
       <ul>
         {teams?.map((t: any) => <li key={t.id}>{t.name} — código: {t.code}</li>)}
-      </ul>|
+      </ul>
       {/* Temporal (solo para testing) */}
-      <Link to="/calendar">Ver Calendario</Link>
     </div>
   )
 }
+ {/* <Link to="/calendar">Ver Calendario</Link> */}

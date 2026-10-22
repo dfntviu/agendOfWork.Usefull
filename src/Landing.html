@@ -1,3 +1,6 @@
+<!-- El archivo de hipertexto actual fue trasladado a JSX.
+ Sin embargo, ocurrieron problemas a nivel de alias especialmente con 
+ el script LoginPageBetter.tsx -->
 <title>Agenda de Equipos</title>
 <style>
      /** 
@@ -391,20 +394,174 @@
   }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 </style>
- <div class="grap">
-    <header class="topbar">
-        <div class="brand">
-            <span class="mark">AE</span>
-        </div>
-        <button class="theme-btn" type="button" aria-label="Cambiar Tema">Tema</button>
-    </header>
+    <div class="grap">
+      <header class="topbar">
+          <div class="brand">
+              <span class="mark">AE</span>
+          </div>
+          <button class="theme-btn" type="button" aria-label="Cambiar Tema">Tema</button>
+      </header>
+    </div>
     <main>
         <section class="wrap hero">
-            
+          <span class="eyebrow">App Full-Stack React + Supabase</span>
+          <h1>Las oficinas no organizan sus recursos. Está app<span>Si</span>.</h1>
+          <p class="lede">Agenda de Equipos centraliza las reservas de recurso compartidos salas, proyectores, vehículos — 
+            y organiza los eventos del equipo sin choques. Todo a la mano, y lo mejor: se gestiona quién entra y quién no, 
+            con permisos por rol.</p>
+            <div class="cta-row">
+                <a href="" class="btn btn-primary">Entrar a la App
+                  <svg width="16" height="16" viewBox="0 0 24 24x" fill="none" stroke="currentColor" stroke-with="2.2" stroke-linecap="round"
+                  stroke-line-join="round">
+                    <path  d="M5 12h14M13 6l6 6-6 6"></path>
+                  </svg>
+                </a>
+            </div>
+            <p class="demo-card">demo_usuario_26@demo.seed
+              <b>. c  ontraseña</b>
+            </p>
         </section>
-    </main>
- </div>
-  <link rel="stylesheet" href="">
- <script>
+          
+        <section class="wrap">
+          <div class="problem">
+            <div class="problem-grid">
+              <div>
+                <h2>El problea real, y crece con el equipo</h2>
+                <p>Una oficina mediana agenda juntas, viajes y capacitaciones en un pizarrón o en la cabeza de alguien.
+                Funciona con cinco personas. Con veinte, se rompe.
+                </p>
+                <p>Dos equipos reservan la misma sala. El proyector desaparece. Nadie sabe qué está apartado ni quién lo aparto. 
+                Una agenda física no persiste, no se comparte, y no sabe quién tiene permiso de tocarla.
+                </p>
+              </div>
+              <div class="chaos">
+                <div class="chaos-item"><span>Dos juntas en la misma sala, a la misma hora.</span></div>
+                <div class="chaos-item"><span>¿Quién tiene el proyector?, en el chat, otra vez.</span></div>
+                <div class="chaos-item"><span>La agenda se construyó en una libreta o se pierde</span></div>
+                <div class="chaos-item"><span>Cualquiera borra el evento de cualquiera</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
 
- </script>
+        <section class="wrap">
+          <div class="section-label">
+            <div class="feats">
+              <article class="fast">
+                <div class="ico">
+                  <svg viewBox="0 0 24 24" fill="none"  stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-line-join="round"> 
+                    <rect  x="3" y="4"  width="18" height="18" rx="2"/>
+                      <path  d="M16 2v4M8 2v4M3 10h18"/></svg>                   
+                </div>
+                <h3>Centralizado y sin choques</h3>
+                <p>Reservas y Eventos de un calendario que todo el equivo visualiza. Sin recurso ya está ocupado, el sistema lo rechaza antes de que lo duplique</p>
+                <!-- <span class="note"> //</span> -->
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="wrap">
+          <div class="section-label">
+            <div class="shots">
+              <figure class="shot">
+                <div   class="shot-frame">
+                  <div class="placeholdeer">Mis equipos<code>/docs/02-mis-03_Teams.join_view.webp</code></div>
+                </div>
+                <figcaption class="shot-cap">
+                  <span class="n">
+                    <div>
+                      <h4>Mis Equipos</h4>
+                      <p>Crea equipos, únete por código de invitación y gestiona miembros.</p>
+                    </div>
+                  </span>
+                </figcaption>
+              </figure>
+
+
+            </div>  
+          </div>
+        <!-- </section> -->
+
+          <figure class="shot">
+            <div class="shot-fame">
+              <div class="placeholder">
+                Calendario
+                <code>/docs/02_Calendar.view.webp</code>
+              </div>
+
+              <figcaption class="shot-cap">
+                <span class="n">02</span>
+                <div>
+                  <h4>
+                    <p>Eventos de equipo en el mes, con el recurso reservado y al día de hoy resaltado.</p>
+                  </h4>
+                </div>
+              </figcaption>
+          </figure>
+
+          <figure class="shot">
+              <div class="shot-frame">
+                <div class="placeholder">Estadistícas<code>/docs/04_Statistics.view.webp</code></div>
+              </div>
+              <figcaption class="shot-cap">
+                <span class="n">
+                  <span>03
+                    <div>
+                      <h4>Estadísticas</h4>
+                      <p>Un tablero con los eventos por recurso. De un vistazo, qué se usa y qué no</p>
+                    </div>
+                  </span>
+                </span>
+              </figcaption>
+          </figure>
+        </section>
+
+        <section class="wrap">
+          <div class="eng">
+            <h2>Escrito a mano, con enfoque para mostrarse en producción</h2>
+              <p>Todo el código se escribió a mano, con fines de aprendizaje. No es un prototipo de tutorial:
+                está testeado, es accesible, y está desplegado.</p>
+
+              <div class="stack">
+                <span class="chip">React + TypeScript</span>
+                <span class="chip">Supabase PostgreSQL + RLS</span>
+                <span class="chip">TanStack Query</span>
+                <span class="chip">23 pruebas automatizados</span>
+                <span class="chip">Responsive</span>
+                <span class="chip">Desplegado en Vercel</span>
+              </div>
+          </div>
+        </section>
+
+        <footer class="wrap">
+            <span>Proyecto para Portfolio Daniel Gómez Pérez, Toluca México</span>
+            <span><a href="https://github.com/dfntviu" target="_black" rel="noopener"></a></span>
+        </footer>
+    </main>
+  <link rel="stylesheet" href="">
+  <script>
+    // Toogle de tema, por si realizan pruebas manualmente en una entrevista. Respeta el estado del sistema.
+
+    (function () {
+      var btn = document.getElementById('theme');
+      var root = document.documentElement;
+
+      try{
+        var saved = localStorage.getItem('ae-theme');
+        if (saved) root.setAttribute('data-theme', saved);
+      }catch(e){
+        btn.addEventListener('click', function(){
+           var cur = root.getAttribute('data-theme');
+           var isDark = cur ? cur == 'dark'
+             : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }); 
+        // El botón de ingresar es un placeholder en el landing suelta; en la app real
+        // apunta al alias --> /login. Aquí solo sera evitado el salto
+        document.getElementById('enter').addEventListener('click', function(e){
+           e.preventDefault();
+        });
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">

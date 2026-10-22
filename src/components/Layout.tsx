@@ -2,10 +2,11 @@ import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { authService } from '../services/auth.service'
 import { ThemeToggle } from '@/components/ThemeToggle'; 
 import './Layout.css';
-
-
+  
+  // NOTA: TODO scrpit que modifique en App.tsx también será modificado en NAV (ya que es una especie de archivo gemelo).
+  // Si algun alias no converge segun corresponda su posicion(ULT - PRIM | PRIM - ULT) ROMPERA su navegación
 const NAV = [
-  { to: '/',          label: 'Mis equipos',  icon: 'ti-users' },
+  { to: '/dash-page',          label: 'Mis equipos',  icon: 'ti-users' },
   { to: '/calendar',  label: 'Calendario',   icon: 'ti-calendar' },
   { to: '/teams',      label: 'Unirse a Equipo',   icon: 'ti-user-plus' },  //Añadido, perfiles de Supabase
   { to: '/dashboard', label: 'Estadísticas', icon: 'ti-box' }, // Añadido, recientemente

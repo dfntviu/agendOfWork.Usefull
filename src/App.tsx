@@ -9,7 +9,8 @@ import { Layout } from './components/Layout'
 import { ResourcesPage } from './routes/ResourcesPage'
 import { CalendarPage } from './routes/CalendarPage'
 import { StatsPage } from './routes/StatsPage'  // nueva [trabajo de] -> 2026/Sept/09
-import { TeamPage } from '@/routes/TeamPage'  // Aniadir Equipos
+import { TeamPage } from '@/routes/TeamPage'  // Aniadir Equipos 
+ import { LandingPage } from '@/LandingPage'
 
 const queryClient = new QueryClient();
 
@@ -19,15 +20,18 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <BrowserRouter>
-          <Routes>
+          <Routes> 
+            {/* Sobre la Navegacion Publica */}
+            <Route path='/' element={ <LandingPage/> } />
             <Route path="/login" element={<LoginPageBest />} />
+            {/* Sobre el Menú */}
             <Route element={<ProtectedRoute />}>
               <Route element={<Layout/>}>
-                <Route path="/" element={<DashboardPage />} />
+                <Route path="/dash-page" element={<DashboardPage />} />
                 <Route path='/calendar' element={<CalendarPage />} />
-                <Route path="/resources" element={<ResourcesPage />} ></Route>
+                <Route path="/resources" element={<ResourcesPage />} />{/*</Route> */}
                 <Route path="/dashboard" element={<StatsPage/>}/>
-                 <Route path='/teams' element={<TeamPage/>} ></Route> 
+                <Route path='/teams' element={<TeamPage/>} />  {/*</Route>  */}
               </Route> 
             </Route>
           </Routes>
@@ -35,7 +39,6 @@ function App() {
       </AuthProvider>
     </QueryClientProvider>
     </>
-    // no reconoce el codigo aplicado en supabase en file: memberships.service, en supabase si lo reconoce
   )
 }
 export default App

@@ -11,7 +11,7 @@ export function LoginPageBest() {
   const [error, setError] = useState('')
   const [advise, setAdvice] = useState('')
   const [cargando,setCargando] = useState(false)
-  const navigate = useNavigate()
+  const navigate = useNavigate()  
 
 
     async function handleSignUp() {
@@ -36,7 +36,7 @@ export function LoginPageBest() {
 
      if (error)  return setError(errorsTranslate(error));
      
-    navigate('/') 
+    navigate('/dash-page') 
       // if (error) return setError(error.message)
   }
 
@@ -44,7 +44,14 @@ export function LoginPageBest() {
     e.preventDefault()
     handleLogin();
   }
+
   
+   async function returnPageMain() {
+      console.warn('Regresando a la Página de Presentación');
+      alert('Regresando al Principio...');
+      navigate('/');
+    }
+
   return (
     <div className='login-page'>
       {/* Nueva logica especializada, en la experiencia de usuario memorable */}
@@ -60,12 +67,12 @@ export function LoginPageBest() {
 
                 <label className="login-field"> 
                     <span className="login-label">Correo</span>
-                    <input className='login-input' 
+                      <input className='login-input' 
                         type='email'
                         value={email}
                         onChange={e => setEmail(e.target.value) }
                         autoComplete='email'
-                    />
+                      />
                 </label>
 
                 <label className='login-field'>
@@ -103,6 +110,10 @@ export function LoginPageBest() {
                   </button>
                 </div>
             </form>
+
+            <div>
+              <button onClick={returnPageMain}>Principal</button>
+            </div>
         {/* </div> */}
     </div>
   )
